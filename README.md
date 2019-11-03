@@ -66,3 +66,16 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+.
+
+### We want you to do the following:
+* Build an API using NodeJS to consume the Feeds below.
+	* NBA game: https://chumley.barstoolsports.com/dev/data/games/6c974274-4bfc-4af8-a9c4-8b926637ba74.json
+	* MLB game: https://chumley.barstoolsports.com/dev/data/games/eed38457-db28-4658-ae4f-4d4d38e9e212.json
+	* Each feed should be hit at most every 15 seconds by our API, therefore...
+	* The data needs to be cached in a database. (Suggestion: MongoDB)
+	* Each request to our API should check the database for cached data: If it's last updated time is < 15 seconds then return it. Otherwise fetch fresh data from the feed and cache it in the database.
+* Build a small React project.  
+	* Some HTML markup is provided. Feel free to extend this or write your own.
+  * Your markup and stylesheet should be valid, scalable and maintainable.
+  * You can use the suggested design above or put your own spin on it.
