@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Scoreboard from './Scoreboard'
 
 export default class Mlb extends Component {
     constructor(props) {

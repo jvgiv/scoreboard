@@ -1,15 +1,31 @@
 import React, { Component } from 'react'
+import Mlb from './mlb/Mlb'
+import Nba from './nba/Nba'
 
 export default class SportPicker extends Component {
     constructor(props) {
         super(props)
     
         this.state = {
-             
+            mlb: true
         }
     }
     
+    mlbSportView = () => {
+        if (!this.state.mlb) {
+            this.setState({
+                mlb: !this.state.mlb
+            })
+        } else return 
+    }
 
+    nbaSportView = () => {
+        if (this.state.mlb) {
+            this.setState({
+                mlb: !this.state.mlb
+            })
+        } else return 
+    }
 
     render() {
         const sportChoice = {
@@ -29,11 +45,29 @@ export default class SportPicker extends Component {
             textAlign: "center"
         }
 
+        const title_u = {
+            width: "50%",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            textDecoration: "underline"            
+        }
+
         return (
             <div>
                 <div style={sportChoice}>
-                    <h2 style={title}>MLB</h2>
-                    <h2 style={title}>NBA</h2>
+                    <h2 onClick={() => this.mlbSportView()} style={this.state.mlb ? title_u : title}>MLB</h2>
+                    <h2 onClick={() => this.nbaSportView()} style={!this.state.mlb ? title_u : title}>NBA</h2>
+                </div>
+
+                <div>
+                    {this.state.mlb ? 
+                        <Mlb />
+                        :
+                        <Nba />    
+                }
                 </div>
             </div>
         )
