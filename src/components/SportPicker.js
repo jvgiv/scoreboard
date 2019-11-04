@@ -15,20 +15,25 @@ export default class SportPicker extends Component {
         const sportChoice = {
             display: "flex",
             flexDirection: "row",
-            width: "60%"
+            width: "60%",
+            margin: "0 auto",
+
         }
 
         const title = {
             width: "50%",
             display: "flex",
-            flexDirection: "row"
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center"
         }
 
         return (
             <div>
                 <div style={sportChoice}>
-                    <h2>MLB</h2>
-                    <h2>NBA</h2>
+                    <h2 style={title}>MLB</h2>
+                    <h2 style={title}>NBA</h2>
                 </div>
             </div>
         )
