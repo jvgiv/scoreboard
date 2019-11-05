@@ -42,7 +42,8 @@ export default class SportPicker extends Component {
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
-            textAlign: "center"
+            textAlign: "center",
+            cursor: "pointer"
         }
 
         const title_u = {
@@ -52,7 +53,8 @@ export default class SportPicker extends Component {
             justifyContent: "center",
             alignItems: "center",
             textAlign: "center",
-            textDecoration: "underline"            
+            textDecoration: "underline",
+            cursor: "pointer"            
         }
 
         return (
