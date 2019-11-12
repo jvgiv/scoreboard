@@ -34,6 +34,7 @@ export default class Mlb extends Component {
                 <Scoreboard 
                     away_inning_scores={this.state.gameStats.away_period_scores} 
                     home_inning_scores={this.state.gameStats.home_period_scores}
+                    
                 />
             </div>
         )
